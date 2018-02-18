@@ -45,5 +45,12 @@ public class Call_activity extends AppCompatActivity {
     }
 
     public void TrucaNum(View view) {
+        String phoneNUM = phoneNumber.getText().toString();
+        if(!phoneNUM.isEmpty()){
+            Toast.makeText(this, "Teucant al "+phoneNUM, Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "No hi ha cap numero marcat", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }
