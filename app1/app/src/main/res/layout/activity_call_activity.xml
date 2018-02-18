@@ -8,7 +8,7 @@
     android:padding="20sp">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/PhoneNumberID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -23,7 +23,7 @@
         android:layout_height="75dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/PhoneNumberID"
         android:layout_marginTop="10dp"
         android:onClick="butonPress"
         android:text="1" />
@@ -37,6 +37,7 @@
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/btn_1"
         android:layout_toRightOf="@+id/btn_1"
+        android:onClick="butonPress"
         android:text="2" />
 
     <Button
@@ -48,6 +49,7 @@
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/btn_2"
         android:layout_toRightOf="@+id/btn_2"
+        android:onClick="butonPress"
         android:text="3" />
 
     <Button
@@ -58,6 +60,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btn_1"
         android:layout_marginTop="10dp"
+        android:onClick="butonPress"
         android:text="4" />
 
     <Button
@@ -69,6 +72,7 @@
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/btn_4"
         android:layout_toRightOf="@+id/btn_4"
+        android:onClick="butonPress"
         android:text="5" />
 
     <Button
@@ -80,6 +84,7 @@
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/btn_5"
         android:layout_toRightOf="@+id/btn_5"
+        android:onClick="butonPress"
         android:text="6" />
 
     <Button
@@ -90,6 +95,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btn_4"
         android:layout_marginTop="10dp"
+        android:onClick="butonPress"
         android:text="7" />
 
     <Button
@@ -101,6 +107,7 @@
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/btn_7"
         android:layout_toRightOf="@+id/btn_7"
+        android:onClick="butonPress"
         android:text="8" />
 
     <Button
@@ -112,6 +119,7 @@
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/btn_8"
         android:layout_toRightOf="@+id/btn_8"
+        android:onClick="butonPress"
         android:text="9" />
 
     <Button
@@ -122,6 +130,7 @@
         android:layout_alignStart="@+id/btn_8"
         android:layout_below="@+id/btn_8"
         android:layout_marginTop="5dp"
+        android:onClick="butonPress"
         android:text="0" />
 
     <Button
@@ -131,6 +140,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:onClick="EsborraNum"
         android:text="Esborra" />
 
     <Button
@@ -140,6 +150,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:onClick="TrucaNum"
         android:text="Truca" />
 
 </RelativeLayout>
