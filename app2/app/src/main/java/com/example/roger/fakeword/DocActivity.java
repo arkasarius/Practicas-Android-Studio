@@ -43,12 +43,16 @@ public class DocActivity extends AppCompatActivity {
         String message;
         switch (requestCode) {
             case 0:
-                message = data.getStringExtra("result");
-                TVtitulo.setText(message);
+                if (resultCode == RESULT_OK) {
+                    message = data.getStringExtra("result");
+                    TVtitulo.setText(message);
+                }
                 break;
             case 1:
-                message = data.getStringExtra("result");
-                TVCuerpo.setText(message);
+                if (resultCode == RESULT_OK) {
+                    message = data.getStringExtra("result");
+                    TVCuerpo.setText(message);
+                }
                 break;
             default:
                 break;
