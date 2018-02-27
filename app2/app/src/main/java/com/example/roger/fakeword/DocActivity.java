@@ -40,12 +40,18 @@ public class DocActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        String message;
         switch (requestCode) {
             case 0:
+                message = data.getStringExtra("result");
+                TVtitulo.setText(message);
                 break;
             case 1:
+                message = data.getStringExtra("result");
+                TVCuerpo.setText(message);
                 break;
-
+            default:
+                break;
         }
 
     }

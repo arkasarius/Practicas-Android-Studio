@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class EditTextActivity extends AppCompatActivity {
     TextView editTitulo;
+    Intent data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,11 +17,13 @@ public class EditTextActivity extends AppCompatActivity {
         String message = intent.getStringExtra("InText");
         editTitulo = findViewById(R.id.TVEditTitulo);
         editTitulo.setText(message);
+        data = new Intent(this,DocActivity.class);
+        data.putExtra("result" ,message);
+        setResult(RESULT_OK,data);
     }
 
     public void saveME(View view) {
         String returnText= editTitulo.getText().toString();
-        Intent data = new Intent(this,DocActivity.class);
         data.putExtra("result" ,returnText);
         setResult(RESULT_OK,data);
         finish();
