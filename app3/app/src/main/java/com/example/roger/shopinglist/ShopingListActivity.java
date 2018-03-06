@@ -2,6 +2,8 @@ package com.example.roger.shopinglist;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -11,6 +13,7 @@ public class ShopingListActivity extends AppCompatActivity {
     private ListView list;
     private ArrayList<String> items;// model de dades
     private ShopingListAdapter adapter;
+    private EditText new_item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +29,17 @@ public class ShopingListActivity extends AppCompatActivity {
 
 
         list = findViewById(R.id.LLista);
-
+        new_item=findViewById(R.id.NewItem);
         adapter = new ShopingListAdapter(this,R.layout.shopping_item, items);
 
         list.setAdapter(adapter);
+    }
+
+    public void onAddItem(View view) {
+        String item = new_item.getText().toString();
+        items.add(item);
+        adapter.notifyDataSetChanged();
+        new_item.setText("");
+        list.smoothScrollToPosition(items.size()-1);
     }
 }
