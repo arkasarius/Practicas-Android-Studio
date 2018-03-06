@@ -3,6 +3,7 @@ package com.example.roger.shopinglist;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -33,6 +34,19 @@ public class ShopingListActivity extends AppCompatActivity {
         adapter = new ShopingListAdapter(this,R.layout.shopping_item, items);
 
         list.setAdapter(adapter);
+        list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                onRemoveItem(position);
+                return false;
+            }
+        });
+    }
+
+    private void onRemoveItem(int position) {
+        items.remove(position);
+        adapter.notifyDataSetChanged();
     }
 
     public void onAddItem(View view) {
