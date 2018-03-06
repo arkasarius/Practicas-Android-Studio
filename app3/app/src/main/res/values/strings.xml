@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ShopingList</string>
+    <string name="confirm">Eliminar item ?</string>
 </resources>
